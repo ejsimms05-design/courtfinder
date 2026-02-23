@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #0F1117;
+  color: #E8ECF8;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #181C27; }
+::-webkit-scrollbar-thumb { background: #2A3148; border-radius: 2px; }
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-up { animation: slide-up 0.3s ease forwards; }
+.animate-fade-in { animation: fade-in 0.2s ease forwards; }
+
+.sport-pill {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border-width: 1px;
+  border-style: solid;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.active-basketball { background: #FF6B2B; border-color: #FF6B2B; color: white; box-shadow: 0 0 20px rgba(255,107,43,0.35); }
+.active-tennis { background: #2DD4A0; border-color: #2DD4A0; color: #0F1117; box-shadow: 0 0 20px rgba(45,212,160,0.35); }
+.active-pickleball { background: #EAB308; border-color: #EAB308; color: #0F1117; box-shadow: 0 0 20px rgba(234,179,8,0.35); }
+.inactive { background: transparent; border-color: #2A3148; color: #6B7494; }
+.inactive:hover { border-color: rgba(255,255,255,0.3); color: rgb(255, 255, 255); }
+
+.go-btn:hover {
+  box-shadow: 0 0 16px rgba(45, 212, 160, 0.6);
+  border-color: #2DD4A0 !important;
+  color: #2DD4A0 !important;
+}
